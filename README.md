@@ -10,15 +10,15 @@
 </p>
 
 ------
-**FastEndpoints Depends** is a way of treating plugins as dependencies to speed up your REST endpoints
+**FastEndpoints Depends** allows you to treat plugins as dependencies to speed up your REST endpoints
 
-- Explore our docs at **[FastEndpoints Depends Docs »](https://matapatos.github.io/wp-fastendpoints/advanced-user-guide/plugins-as-dependencies/)**
+- Explore our docs at **[FastEndpoints Depends Docs »](https://attributes-php.github.io/wp-fastendpoints/advanced-user-guide/plugins-as-dependencies/)**
 
 ## Features
 
 - Only includes the plugins you need for the endpoint
 - No code changes needed. Just install and activate this plugin as an MU plugin
-- Full support to both native WP REST endpoints and [WP-FastEndpoints](https://github.com/matapatos/wp-fastendpoints)
+- Full support to both native WP REST endpoints and [WP-FastEndpoints](https://github.com/attributes-php/wp-fastendpoints)
 
 ## Requirements
 
