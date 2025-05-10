@@ -26,8 +26,6 @@
 - WordPress 6.x
 - Install as a [must-use plugin](https://developer.wordpress.org/advanced-administration/plugins/mu-plugins/)
 
-We aim to support versions that haven't reached their end-of-life.
-
 ## Installation
 
 ### Using [Bedrock](https://roots.io/bedrock/)
@@ -35,12 +33,14 @@ We aim to support versions that haven't reached their end-of-life.
 1. Navigate to the Bedrock root folder
 2. Install the following composer package `composer require attributes-php/wp-fastendpoints-depends`
 3. Run the following WP CLI command `wp fastendpoints depends` or activate any plugin on the website
+4. Enjoy 😊
 
 ### Using standard WordPress structure
 
 1. Download plugin from WordPress store
 2. Install plugin as a [MU-plugin](https://developer.wordpress.org/advanced-administration/plugins/mu-plugins/)
 3. Run the following WP CLI command `wp fastendpoints depends` or activate any plugin on the website
+4. Enjoy 😊
 
 ## New deployment
 
