@@ -12,7 +12,6 @@
   "license": "MIT",
   "require": {
     "php": "^8.1",
-    "composer/installers": "^2.2",
     "matapatos/wp-fastendpoints-contracts": "^1.1"
   },
   "autoload": {
