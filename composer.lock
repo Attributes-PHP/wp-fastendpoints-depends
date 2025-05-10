@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9b1ba02ebc6b7d52112451eeb6553db0",
+    "content-hash": "cae56015b5d9c670d02efd61267740ab",
     "packages": [
         {
-            "name": "matapatos/wp-fastendpoints-contracts",
-            "version": "v1.1.0",
+            "name": "attributes-php/wp-fastendpoints-contracts",
+            "version": "v1.1.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/matapatos/wp-fastendpoints-contracts.git",
-                "reference": "633568a2fd9ae6946b47628824cb302d6b85d85b"
+                "url": "https://github.com/Attributes-PHP/wp-fastendpoints-contracts.git",
+                "reference": "ff8e03520db63a2ba9f0d499e7379d52fd3d1322"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/matapatos/wp-fastendpoints-contracts/zipball/633568a2fd9ae6946b47628824cb302d6b85d85b",
-                "reference": "633568a2fd9ae6946b47628824cb302d6b85d85b",
+                "url": "https://api.github.com/repos/Attributes-PHP/wp-fastendpoints-contracts/zipball/ff8e03520db63a2ba9f0d499e7379d52fd3d1322",
+                "reference": "ff8e03520db63a2ba9f0d499e7379d52fd3d1322",
                 "shasum": ""
             },
             "require": {
@@ -43,10 +43,10 @@
                 "wordpress"
             ],
             "support": {
-                "issues": "https://github.com/matapatos/wp-fastendpoints-contracts/issues",
-                "source": "https://github.com/matapatos/wp-fastendpoints-contracts/tree/v1.1.0"
+                "issues": "https://github.com/Attributes-PHP/wp-fastendpoints-contracts/issues",
+                "source": "https://github.com/Attributes-PHP/wp-fastendpoints-contracts/tree/v1.1.1"
             },
-            "time": "2024-11-15T14:16:26+00:00"
+            "time": "2025-05-10T15:19:54+00:00"
         }
     ],
     "packages-dev": [
@@ -1278,6 +1278,49 @@
                 "source": "https://github.com/Attributes-PHP/wp-fastendpoints/tree/v2.1.1"
             },
             "time": "2025-03-18T08:44:13+00:00"
+        },
+        {
+            "name": "matapatos/wp-fastendpoints-contracts",
+            "version": "v1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Attributes-PHP/wp-fastendpoints-contracts.git",
+                "reference": "ff8e03520db63a2ba9f0d499e7379d52fd3d1322"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Attributes-PHP/wp-fastendpoints-contracts/zipball/ff8e03520db63a2ba9f0d499e7379d52fd3d1322",
+                "reference": "ff8e03520db63a2ba9f0d499e7379d52fd3d1322",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.1"
+            },
+            "require-dev": {
+                "laravel/pint": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Wp\\FastEndpoints\\Contracts\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Holds common contracts for WP-FastEndpoints",
+            "keywords": [
+                "fastest",
+                "rest-api",
+                "wordpress"
+            ],
+            "support": {
+                "issues": "https://github.com/Attributes-PHP/wp-fastendpoints-contracts/issues",
+                "source": "https://github.com/Attributes-PHP/wp-fastendpoints-contracts/tree/v1.1.1"
+            },
+            "abandoned": "attributes-php/wp-fastendpoints-contracts",
+            "time": "2025-05-10T15:19:54+00:00"
         },
         {
             "name": "mockery/mockery",

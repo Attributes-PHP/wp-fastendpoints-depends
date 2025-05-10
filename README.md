@@ -35,13 +35,18 @@ We aim to support versions that haven't reached their end-of-life.
 1. Navigate to the Bedrock root folder
 2. Install the following composer package `composer require attributes-php/wp-fastendpoints-depends`
 3. Run the following WP CLI command `wp fastendpoints depends` or activate any plugin on the website
-4. Enjoy! 😊
 
 ### Using standard WordPress structure
 
 1. Download plugin from WordPress store
 2. Install plugin as a [MU-plugin](https://developer.wordpress.org/advanced-administration/plugins/mu-plugins/)
 3. Run the following WP CLI command `wp fastendpoints depends` or activate any plugin on the website
-4. Enjoy! 😊
+
+## New deployment
+
+When deploying a new website version you will need to re-generate the route dependencies by either:
+
+1. Re-run the following WP CLI command `wp fastendpoints depends` or to
+2. Activate any plugin on the website
 
 FastEndpoints Depends was created by **[André Gil](https://www.linkedin.com/in/andre-gil/)** and is open-sourced software licensed under the **[MIT license](https://opensource.org/licenses/MIT)**.
