@@ -44,7 +44,7 @@
 
 ## New deployment
 
-When deploying a new website version you will need to re-generate the route dependencies by either:
+When doing a new deployment you will need to re-generate the route dependencies by either:
 
 1. Re-run the following WP CLI command `wp fastendpoints depends` or to
 2. Activate any plugin on the website
