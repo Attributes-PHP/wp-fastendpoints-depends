@@ -24,12 +24,20 @@
 
 - PHP 8.1+
 - WordPress 6.x
-- [composer/installers](https://packagist.org/packages/composer/installers)
 - Install as a [must-use plugin](https://developer.wordpress.org/advanced-administration/plugins/mu-plugins/)
 
 We aim to support versions that haven't reached their end-of-life.
 
 ## Installation
+
+### Using [Bedrock](https://roots.io/bedrock/)
+
+1. Go to the Bedrock root folder where the [composer.json](https://github.com/roots/bedrock/blob/master/composer.json) is
+2. Install the following composer package `composer require attributes-php/wp-fastendpoints-depends`
+3. Run the following WP CLI command `wp fastendpoints depends` or activate any plugin on the website
+4. Enjoy! 😊
+
+### Using standard WordPress structure
 
 1. Download plugin from WordPress store
 2. Install plugin as a [MU-plugin](https://developer.wordpress.org/advanced-administration/plugins/mu-plugins/)
