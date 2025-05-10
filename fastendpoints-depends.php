@@ -12,6 +12,10 @@
  *
  * @license MIT
  */
+
+use Wp\FastEndpoints\Depends\DependenciesGenerator;
+use Wp\FastEndpoints\Depends\DependsAutoloader;
+
 $composer = __DIR__.'/vendor/autoload.php';
 if (! file_exists($composer)) {
     wp_die(
@@ -24,9 +28,9 @@ if (! file_exists($composer)) {
 
 require_once $composer;
 
-$autoloader = $autoloader ?? new \Wp\FastEndpoints\Depends\DependsAutoloader;
+$autoloader = $autoloader ?? new DependsAutoloader;
 $autoloader->register();
 
 $isToUpdateOnPluginActivation = defined('FASTENDPOINTS_DEPENDS_REFRESH_ON_PLUGIN_ACTIVATION') ? \FASTENDPOINTS_DEPENDS_REFRESH_ON_PLUGIN_ACTIVATION : true;
-$dependencies = $generator ?? new \Wp\FastEndpoints\Depends\DependenciesGenerator(null, $isToUpdateOnPluginActivation);
+$dependencies = $generator ?? new DependenciesGenerator(null, $isToUpdateOnPluginActivation);
 $dependencies->register();
