@@ -1,7 +1,13 @@
 {
   "name": "attributes-php/fastendpoints-depends",
   "type": "wordpress-muplugin",
-  "description": "Treat WordPress plugins as dependencies to speed up your REST API's",
+  "description": "Treats WordPress plugins as dependencies to speed up your REST API's",
+  "authors": [
+    {
+      "name": "André Gil",
+      "homepage": "https://github.com/matapatos"
+    }
+  ],
   "keywords": [
     "wordpress",
     "rest-api",
