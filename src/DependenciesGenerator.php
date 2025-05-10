@@ -40,7 +40,7 @@ class DependenciesGenerator
     /**
      * Updates the REST endpoint dependencies
      */
-    public function update($plugin = null): void
+    public function update(): void
     {
         if (did_action('wp_loaded')) {
             $this->updateDependenciesConfig();
