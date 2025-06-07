@@ -6,7 +6,7 @@
     <a href="https://codecov.io/gh/Attributes-PHP/wp-fastendpoints-depends" ><img alt="Code Coverage" src="https://codecov.io/gh/Attributes-PHP/wp-fastendpoints-depends/graph/badge.svg?token=8N7N9NMGLG"/></a>
     <a href="https://en-gb.wordpress.org/plugins/fastendpoints-depends/"><img alt="WordPress Plugin Version" src="https://img.shields.io/wordpress/plugin/v/fastendpoints-depends"></a>
     <a href="https://packagist.org/packages/Attributes-PHP/wp-fastendpoints"><img alt="Supported WordPress Versions" src="https://img.shields.io/badge/6.x-versions?logo=wordpress&label=versions"></a>
-    <a href="https://opensource.org/licenses/MIT"><img alt="Software License" src="https://img.shields.io/badge/MIT?label=MIT"></a>
+    <a href="https://opensource.org/licenses/MIT"><img alt="Software License" src="https://img.shields.io/badge/Licence-MIT-brightgreen"></a>
 </p>
 
 ------
