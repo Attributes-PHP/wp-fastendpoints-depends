@@ -1,5 +1,5 @@
 {
-  "name": "attributes-php/fastendpoints-depends",
+  "name": "attributes-php/wp-fastendpoints-depends",
   "type": "wordpress-muplugin",
   "description": "Treats WordPress plugins as dependencies to speed up your REST API's",
   "authors": [
@@ -17,16 +17,16 @@
   "license": "MIT",
   "require": {
     "php": "^8.1",
-    "attributes-php/wp-fastendpoints-contracts": "^1.1"
+    "attributes-php/wp-fastendpoints-contracts": "^2.0"
   },
   "autoload": {
     "psr-4": {
-      "Wp\\FastEndpoints\\Depends\\": "src/"
+      "Attributes\\Wp\\FastEndpoints\\Depends\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Wp\\FastEndpoints\\Depends\\Tests\\": "tests/"
+      "Attributes\\Wp\\FastEndpoints\\Depends\\Tests\\": "tests/"
     },
     "files": [
       "tests/constants.php"
@@ -38,7 +38,7 @@
     "brain/monkey": "2.*",
     "laravel/pint": "*",
     "pestphp/pest-plugin-parallel": "^1.2",
-    "matapatos/wp-fastendpoints": "^2.1"
+    "attributes-php/wp-fastendpoints": "^3.0"
   },
   "scripts": {
     "lint": "./vendor/bin/pint --config pint.json",

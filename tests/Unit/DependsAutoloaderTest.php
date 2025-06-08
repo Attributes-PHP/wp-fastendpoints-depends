@@ -10,14 +10,14 @@
 
 declare(strict_types=1);
 
-namespace Wp\FastEndpoints\Depends\Tests\Unit;
+namespace Attributes\Wp\FastEndpoints\Depends\Tests\Unit;
 
+use Attributes\Wp\FastEndpoints\Depends\DependsAutoloader;
+use Attributes\Wp\FastEndpoints\Depends\Tests\Helpers\Helpers;
 use Brain\Monkey;
 use Brain\Monkey\Filters;
 use Brain\Monkey\Functions;
 use Mockery;
-use Wp\FastEndpoints\Depends\DependsAutoloader;
-use Wp\FastEndpoints\Depends\Tests\Helpers\Helpers;
 
 beforeEach(function () {
     Monkey\setUp();

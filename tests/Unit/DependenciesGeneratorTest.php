@@ -10,7 +10,7 @@
 
 declare(strict_types=1);
 
-namespace Wp\FastEndpoints\Depends\Tests\Unit;
+namespace Attributes\Wp\FastEndpoints\Depends\Tests\Unit;
 
 use Brain\Monkey;
 use Brain\Monkey\Actions;

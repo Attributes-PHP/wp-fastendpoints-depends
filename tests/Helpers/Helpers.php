@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Wp\FastEndpoints\Depends\Tests\Helpers;
+namespace Attributes\Wp\FastEndpoints\Depends\Tests\Helpers;
 
-use Wp\FastEndpoints\Router;
+use Attributes\Wp\FastEndpoints\Router;
 
 class Helpers
 {

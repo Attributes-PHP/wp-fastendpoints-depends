@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cae56015b5d9c670d02efd61267740ab",
+    "content-hash": "0246b3ee81e298af863bd4d2f807dd3e",
     "packages": [
         {
             "name": "attributes-php/wp-fastendpoints-contracts",
-            "version": "v1.1.1",
+            "version": "v2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Attributes-PHP/wp-fastendpoints-contracts.git",
-                "reference": "ff8e03520db63a2ba9f0d499e7379d52fd3d1322"
+                "reference": "00757564dbeec69d0e4b3fa65d151932f1a268c2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Attributes-PHP/wp-fastendpoints-contracts/zipball/ff8e03520db63a2ba9f0d499e7379d52fd3d1322",
-                "reference": "ff8e03520db63a2ba9f0d499e7379d52fd3d1322",
+                "url": "https://api.github.com/repos/Attributes-PHP/wp-fastendpoints-contracts/zipball/00757564dbeec69d0e4b3fa65d151932f1a268c2",
+                "reference": "00757564dbeec69d0e4b3fa65d151932f1a268c2",
                 "shasum": ""
             },
             "require": {
@@ -29,7 +29,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Wp\\FastEndpoints\\Contracts\\": "src/"
+                    "Attributes\\Wp\\FastEndpoints\\Contracts\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -44,9 +44,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Attributes-PHP/wp-fastendpoints-contracts/issues",
-                "source": "https://github.com/Attributes-PHP/wp-fastendpoints-contracts/tree/v1.1.1"
+                "source": "https://github.com/Attributes-PHP/wp-fastendpoints-contracts/tree/v2.0.0"
             },
-            "time": "2025-05-10T15:19:54+00:00"
+            "time": "2025-05-12T17:53:56+00:00"
         }
     ],
     "packages-dev": [

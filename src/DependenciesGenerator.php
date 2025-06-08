@@ -1,6 +1,6 @@
 <?php
 
-namespace Wp\FastEndpoints\Depends;
+namespace Attributes\Wp\FastEndpoints\Depends;
 
 use WP_CLI;
 
@@ -217,6 +217,11 @@ class DependenciesGenerator
             return;
         }
 
+        $dir = dirname($configFilePath);
+        if (! is_dir($dir)) {
+            mkdir($dir, 0644, true);
+        }
+
         $timestamp = date('c');
         $data = "<?php # Generated ${timestamp}\r\n";
         $data .= 'return '.var_export($dependencies, true).';';
@@ -236,6 +241,6 @@ class DependenciesGenerator
             return \FASTENDPOINTS_DEPENDS_CONFIG_FILEPATH;
         }
 
-        return plugin_dir_path(__FILE__).'/../config.php';
+        return plugin_dir_path(__FILE__).'/../.cache/config.php';
     }
 }

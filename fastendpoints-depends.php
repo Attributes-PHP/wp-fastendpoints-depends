@@ -4,7 +4,7 @@
  * Plugin Name: FastEndpoints Depends
  * Plugin URI:  https://github.com/Attributes-PHP/wp-fastendpoints-depends
  * Description: Treats WordPress plugins as dependencies to speed up your REST API's
- * Version:     1.0.1
+ * Version:     2.0.0
  * Author:      André Gil
  * Author URI:  https://github.com/Attributes-PHP
  *
@@ -13,14 +13,14 @@
  * @license MIT
  */
 
-use Wp\FastEndpoints\Depends\DependenciesGenerator;
-use Wp\FastEndpoints\Depends\DependsAutoloader;
+use Attributes\Wp\FastEndpoints\Depends\DependenciesGenerator;
+use Attributes\Wp\FastEndpoints\Depends\DependsAutoloader;
 
 $composer = __DIR__.'/vendor/autoload.php';
 if (! file_exists($composer)) {
     wp_die(
         esc_html__(
-            'Error locating autoloader in mu-plugins/wp-fastendpoints-depends. Please run <code>composer install</code>.',
+            'Error locating autoloader in mu-plugins/fastendpoints-depends. Please run <code>composer install</code>.',
             'fastendpoints-depends',
         ),
     );
