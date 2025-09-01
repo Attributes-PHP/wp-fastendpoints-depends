@@ -10,11 +10,12 @@
 
 declare(strict_types=1);
 
-namespace Wp\FastEndpoints\Depends\Tests\Unit;
+namespace Attributes\Wp\FastEndpoints\Depends\Tests\Unit;
 
+use Attributes\Wp\FastEndpoints\Depends\DependenciesGenerator;
+use Attributes\Wp\FastEndpoints\Depends\DependsCommand;
 use Brain\Monkey;
-use Wp\FastEndpoints\Depends\DependenciesGenerator;
-use Wp\FastEndpoints\Depends\DependsCommand;
+use Mockery;
 
 beforeEach(function () {
     Monkey\setUp();
@@ -27,7 +28,7 @@ afterEach(function () {
 // update
 
 test('Update dependencies sub-command', function () {
-    $generator = \Mockery::mock(DependenciesGenerator::class)
+    $generator = Mockery::mock(DependenciesGenerator::class)
         ->makePartial()
         ->shouldReceive('update')
         ->once()
@@ -39,14 +40,14 @@ test('Update dependencies sub-command', function () {
 // _clear
 
 test('Clears dependencies sub-command', function () {
-    \Mockery::mock('alias:WP_CLI')
+    Mockery::mock('alias:WP_CLI')
         ->shouldReceive('success')
         ->once()
         ->with('REST route dependencies cleared');
 
     $tmpFile = tmpfile();
     $tmpFilePath = stream_get_meta_data($tmpFile)['uri'];
-    $generator = \Mockery::mock(DependenciesGenerator::class)
+    $generator = Mockery::mock(DependenciesGenerator::class)
         ->makePartial()
         ->shouldReceive('getConfigFilePath')
         ->once()
@@ -59,12 +60,12 @@ test('Clears dependencies sub-command', function () {
 })->group('command', 'depends-clear');
 
 test('Clears dependencies sub-command when no configs exist', function () {
-    \Mockery::mock('alias:WP_CLI')
+    Mockery::mock('alias:WP_CLI')
         ->shouldReceive('success')
         ->once()
         ->with('REST route dependencies cleared');
 
-    $generator = \Mockery::mock(DependenciesGenerator::class)
+    $generator = Mockery::mock(DependenciesGenerator::class)
         ->makePartial()
         ->shouldReceive('getConfigFilePath')
         ->once()

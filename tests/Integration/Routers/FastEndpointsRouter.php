@@ -10,7 +10,7 @@
 
 declare(strict_types=1);
 
-use Wp\FastEndpoints\Router;
+use Attributes\Wp\FastEndpoints\Router;
 
 $router = new Router('fast-endpoints', 'v1');
 $router->depends(['my-plugin']);

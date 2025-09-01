@@ -10,11 +10,12 @@
 
 declare(strict_types=1);
 
-namespace Wp\FastEndpoints\Depends\Tests\Unit;
+namespace Attributes\Wp\FastEndpoints\Depends\Tests\Unit;
 
+use Attributes\Wp\FastEndpoints\Depends\DependenciesGenerator;
+use Attributes\Wp\FastEndpoints\Depends\DependsAutoloader;
 use Brain\Monkey;
-use Wp\FastEndpoints\Depends\DependenciesGenerator;
-use Wp\FastEndpoints\Depends\DependsAutoloader;
+use Mockery;
 
 beforeEach(function () {
     Monkey\setUp();
@@ -32,10 +33,10 @@ test('Check composer type', function () {
 })->group('plugin', 'composer');
 
 test('Registering both autoloader and generator', function () {
-    $autoloader = \Mockery::mock(DependsAutoloader::class)
+    $autoloader = Mockery::mock(DependsAutoloader::class)
         ->shouldReceive('register')
         ->getMock();
-    $generator = \Mockery::mock(DependenciesGenerator::class)
+    $generator = Mockery::mock(DependenciesGenerator::class)
         ->shouldReceive('register')
         ->getMock();
     require_once \PLUGIN_ROOT_DIR.'/fastendpoints-depends.php';

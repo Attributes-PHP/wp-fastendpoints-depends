@@ -10,15 +10,16 @@
 
 declare(strict_types=1);
 
-namespace Wp\FastEndpoints\Depends\Tests\Unit;
+namespace Attributes\Wp\FastEndpoints\Depends\Tests\Unit;
 
+use Attributes\Wp\FastEndpoints\Depends\DependenciesGenerator;
+use Attributes\Wp\FastEndpoints\Depends\DependsCommand;
+use Attributes\Wp\FastEndpoints\Depends\Tests\Helpers\Helpers;
 use Brain\Monkey;
 use Brain\Monkey\Actions;
 use Brain\Monkey\Functions;
 use Mockery;
-use Wp\FastEndpoints\Depends\DependenciesGenerator;
-use Wp\FastEndpoints\Depends\DependsCommand;
-use Wp\FastEndpoints\Depends\Tests\Helpers\Helpers;
+use ReflectionProperty;
 
 beforeEach(function () {
     Monkey\setUp();
@@ -52,7 +53,7 @@ test('Register generator via CLI', function () {
         ->shouldReceive('add_command')
         ->once()
         ->with('fastendpoints', DependsCommand::class);
-    $reflection = new \ReflectionProperty(DependenciesGenerator::class, 'isToUpdateOnPluginActivation');
+    $reflection = new ReflectionProperty(DependenciesGenerator::class, 'isToUpdateOnPluginActivation');
     $reflection->setValue($generator, true);
     $generator->register();
 })->group('generator', 'register');
@@ -367,7 +368,7 @@ test('Retrieve config file path via constant', function () {
     $generator = new DependenciesGenerator;
     expect($generator->getConfigFilePath())
         ->toBe('/plugin/config.php');
-})->group('generator', 'getConfigFilePath');
+})->group('generator', 'getConfigFilePath', 'final');
 
 test('Retrieve config file path via argument', function () {
     $autoloader = new DependenciesGenerator('/custom/config.php');

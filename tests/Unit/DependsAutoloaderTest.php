@@ -10,14 +10,14 @@
 
 declare(strict_types=1);
 
-namespace Wp\FastEndpoints\Depends\Tests\Unit;
+namespace Attributes\Wp\FastEndpoints\Depends\Tests\Unit;
 
+use Attributes\Wp\FastEndpoints\Depends\DependsAutoloader;
+use Attributes\Wp\FastEndpoints\Depends\Tests\Helpers\Helpers;
 use Brain\Monkey;
 use Brain\Monkey\Filters;
 use Brain\Monkey\Functions;
 use Mockery;
-use Wp\FastEndpoints\Depends\DependsAutoloader;
-use Wp\FastEndpoints\Depends\Tests\Helpers\Helpers;
 
 beforeEach(function () {
     Monkey\setUp();
@@ -46,7 +46,7 @@ test('Creating DependsAutoloader instance', function () {
 // Can register?
 
 test('Can register autoloader', function () {
-    $autoloader = \Mockery::mock(DependsAutoloader::class)
+    $autoloader = Mockery::mock(DependsAutoloader::class)
         ->makePartial()
         ->shouldAllowMockingProtectedMethods()
         ->shouldReceive('isRestRequest')
@@ -58,7 +58,7 @@ test('Can register autoloader', function () {
 })->group('autoloader', 'canRegister');
 
 test('Avoid registering autoloader when it is not a REST request', function () {
-    $autoloader = \Mockery::mock(DependsAutoloader::class)
+    $autoloader = Mockery::mock(DependsAutoloader::class)
         ->makePartial()
         ->shouldAllowMockingProtectedMethods()
         ->shouldReceive('isRestRequest')
@@ -83,7 +83,7 @@ test('Avoid registering autoloader multiple times', function () {
 })->group('autoloader', 'canRegister');
 
 test('Avoid registering autoloader when enabled flag is false', function () {
-    $autoloader = \Mockery::mock(DependsAutoloader::class)
+    $autoloader = Mockery::mock(DependsAutoloader::class)
         ->makePartial()
         ->shouldAllowMockingProtectedMethods()
         ->shouldReceive('isDisabled')
@@ -107,7 +107,7 @@ test('Retrieving correct dependencies', function (string $method) {
         ],
     ];
     $_SERVER['REQUEST_METHOD'] = $method;
-    $autoloader = \Mockery::mock(DependsAutoloader::class)
+    $autoloader = Mockery::mock(DependsAutoloader::class)
         ->makePartial()
         ->shouldAllowMockingProtectedMethods()
         ->shouldReceive('getConfigFilePath')
@@ -120,7 +120,7 @@ test('Retrieving correct dependencies', function (string $method) {
 })->with(['GET', 'POST'])->group('autoloader', 'getFastEndpointDependencies');
 
 test('No dependencies saved', function (string $returnValue) {
-    $autoloader = \Mockery::mock(DependsAutoloader::class)
+    $autoloader = Mockery::mock(DependsAutoloader::class)
         ->makePartial()
         ->shouldAllowMockingProtectedMethods()
         ->shouldReceive('getConfigFilePath')
@@ -134,7 +134,7 @@ test('No dependencies saved', function (string $returnValue) {
 })->with([EMPTY_CONFIG_FILEPATH, '/non-existent/path.php'])->group('autoloader', 'getFastEndpointDependencies');
 
 test('Unavailable HTTP method', function () {
-    $autoloader = \Mockery::mock(DependsAutoloader::class)
+    $autoloader = Mockery::mock(DependsAutoloader::class)
         ->makePartial()
         ->shouldAllowMockingProtectedMethods()
         ->shouldReceive('getConfigFilePath')
@@ -154,7 +154,7 @@ test('Discards unnecessary plugins', function (array $activePlugins) {
     Functions\expect('rest_get_url_prefix')->andReturn('wp-json');
 
     $expectedPlugins = array_values(array_intersect($activePlugins, ['my-plugin']));
-    $autoloader = \Mockery::mock(DependsAutoloader::class)
+    $autoloader = Mockery::mock(DependsAutoloader::class)
         ->makePartial()
         ->shouldAllowMockingProtectedMethods();
     $autoloader
@@ -201,7 +201,7 @@ test('Discards all plugins', function () {
 })->group('autoloader', 'discardUnnecessaryPlugins');
 
 test('Ignores discarding if no plugins are active', function () {
-    $autoloader = \Mockery::mock(DependsAutoloader::class)
+    $autoloader = Mockery::mock(DependsAutoloader::class)
         ->makePartial()
         ->shouldAllowMockingProtectedMethods()
         ->shouldNotReceive('getFastEndpointDependencies')
@@ -212,7 +212,7 @@ test('Ignores discarding if no plugins are active', function () {
 })->group('autoloader', 'discardUnnecessaryPlugins');
 
 test('Ignores discarding if no rest path', function () {
-    $autoloader = \Mockery::mock(DependsAutoloader::class)
+    $autoloader = Mockery::mock(DependsAutoloader::class)
         ->makePartial()
         ->shouldAllowMockingProtectedMethods();
     $autoloader
@@ -233,7 +233,7 @@ test('Ignores discarding if no rest path', function () {
 test('No matching routes found to discard plugins', function () {
     Functions\expect('rest_get_url_prefix')->andReturn('wp-json');
 
-    $autoloader = \Mockery::mock(DependsAutoloader::class)
+    $autoloader = Mockery::mock(DependsAutoloader::class)
         ->makePartial()
         ->shouldAllowMockingProtectedMethods();
     $autoloader
@@ -255,7 +255,7 @@ test('No matching routes found to discard plugins', function () {
 // Register
 
 test('Registering autoloader', function () {
-    $autoloader = \Mockery::mock(DependsAutoloader::class)
+    $autoloader = Mockery::mock(DependsAutoloader::class)
         ->makePartial()
         ->shouldAllowMockingProtectedMethods()
         ->shouldReceive('canRegister')
@@ -271,7 +271,7 @@ test('Registering autoloader', function () {
 })->group('autoloader', 'register');
 
 test('Avoid register autoloader when unable', function () {
-    $autoloader = \Mockery::mock(DependsAutoloader::class)
+    $autoloader = Mockery::mock(DependsAutoloader::class)
         ->makePartial()
         ->shouldAllowMockingProtectedMethods()
         ->shouldReceive('canRegister')
@@ -288,7 +288,7 @@ test('Avoid register autoloader when unable', function () {
 // isRestRequest
 
 test('Is a REST request when the WordPress flag is enabled', function () {
-    $autoloader = \Mockery::mock(DependsAutoloader::class)
+    $autoloader = Mockery::mock(DependsAutoloader::class)
         ->makePartial()
         ->shouldAllowMockingProtectedMethods()
         ->shouldReceive('isWpRestRequestFlagEnabled')
@@ -300,7 +300,7 @@ test('Is a REST request when the WordPress flag is enabled', function () {
 })->group('autoloader', 'register');
 
 test('Is a REST request when rest_route is fulfilled', function () {
-    $autoloader = \Mockery::mock(DependsAutoloader::class)
+    $autoloader = Mockery::mock(DependsAutoloader::class)
         ->makePartial()
         ->shouldAllowMockingProtectedMethods()
         ->shouldReceive('isWpRestRequestFlagEnabled')
@@ -316,7 +316,7 @@ test('Is a REST request when route matches a REST path', function () {
     Functions\when('rest_url')->justReturn(['path' => '/wp-json']);
     Functions\when('trailingslashit')->returnArg();
     Functions\when('wp_parse_url')->returnArg();
-    $autoloader = \Mockery::mock(DependsAutoloader::class)
+    $autoloader = Mockery::mock(DependsAutoloader::class)
         ->makePartial()
         ->shouldAllowMockingProtectedMethods();
     $autoloader
@@ -332,7 +332,7 @@ test('Is a REST request when route matches a REST path', function () {
 })->group('autoloader', 'register');
 
 test('Is not a REST request when no path is defined', function () {
-    $autoloader = \Mockery::mock(DependsAutoloader::class)
+    $autoloader = Mockery::mock(DependsAutoloader::class)
         ->makePartial()
         ->shouldAllowMockingProtectedMethods();
     $autoloader
@@ -384,7 +384,7 @@ test('Retrieve config file path via constant', function () {
     $autoloader = new DependsAutoloader;
     expect(Helpers::invokeNonPublicClassMethod($autoloader, 'getConfigFilePath'))
         ->toBe('/plugin/config.php');
-})->group('autoloader', 'getConfigFilePath');
+})->group('autoloader', 'getConfigFilePath', 'final');
 
 test('Retrieve config file path via argument', function () {
     $autoloader = new DependsAutoloader('/custom/config.php');

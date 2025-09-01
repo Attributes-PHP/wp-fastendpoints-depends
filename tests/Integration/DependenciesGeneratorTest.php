@@ -10,10 +10,10 @@
 
 declare(strict_types=1);
 
-namespace Wp\FastEndpoints\Depends\Tests\Integration;
+namespace Attributes\Wp\FastEndpoints\Depends\Tests\Integration;
 
-use Wp\FastEndpoints\Depends\DependenciesGenerator;
-use Wp\FastEndpoints\Depends\Tests\Helpers\Helpers;
+use Attributes\Wp\FastEndpoints\Depends\DependenciesGenerator;
+use Attributes\Wp\FastEndpoints\Depends\Tests\Helpers\Helpers;
 use Yoast\WPTestUtils\WPIntegration\TestCase;
 
 if (! Helpers::isIntegrationTest()) {

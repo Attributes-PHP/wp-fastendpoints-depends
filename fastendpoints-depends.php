@@ -13,8 +13,8 @@
  * @license MIT
  */
 
-use Wp\FastEndpoints\Depends\DependenciesGenerator;
-use Wp\FastEndpoints\Depends\DependsAutoloader;
+use Attributes\Wp\FastEndpoints\Depends\DependenciesGenerator;
+use Attributes\Wp\FastEndpoints\Depends\DependsAutoloader;
 
 $composer = __DIR__.'/vendor/autoload.php';
 if (! file_exists($composer)) {

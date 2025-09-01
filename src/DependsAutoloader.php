@@ -1,6 +1,6 @@
 <?php
 
-namespace Wp\FastEndpoints\Depends;
+namespace Attributes\Wp\FastEndpoints\Depends;
 
 use WP_Rewrite;
 

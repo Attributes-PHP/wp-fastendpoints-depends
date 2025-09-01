@@ -10,9 +10,9 @@
 </p>
 
 ------
-**FastEndpoints Depends** allows you to treat plugins as dependencies to speed up your REST endpoints
+**WP-FastEndpoints Depends** allows you to treat plugins as dependencies to speed up your REST endpoints
 
-- Explore our docs at **[FastEndpoints Depends Docs »](https://attributes-php.github.io/wp-fastendpoints/advanced-user-guide/plugins-as-dependencies/)**
+- Explore our docs at **[WP-FastEndpoints Depends Docs »](https://attributes-php.github.io/wp-fastendpoints/advanced-user-guide/plugins-as-dependencies/)**
 
 ## Features
 
@@ -49,4 +49,4 @@ When doing a new deployment you will need to re-generate the route dependencies 
 1. Re-run the following WP CLI command `wp fastendpoints depends` or to
 2. Activate any plugin on the website
 
-FastEndpoints Depends was created by **[André Gil](https://www.linkedin.com/in/andre-gil/)** and is open-sourced software licensed under the **[MIT license](https://opensource.org/licenses/MIT)**.
+WP-FastEndpoints Depends was created by **[André Gil](https://www.linkedin.com/in/andre-gil/)** and is open-sourced software licensed under the **[MIT license](https://opensource.org/licenses/MIT)**.
