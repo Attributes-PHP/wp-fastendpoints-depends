@@ -37,7 +37,7 @@ class DependsCommand
     {
         $configFilePath = $this->generator->getConfigFilePath();
         if (file_exists($configFilePath)) {
-            unlink($configFilePath);
+            wp_delete_file($configFilePath);
         }
 
         WP_CLI::success('REST route dependencies cleared');

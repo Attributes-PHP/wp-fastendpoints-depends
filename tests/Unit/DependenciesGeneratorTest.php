@@ -339,6 +339,8 @@ test('Removes dependencies config if no dependencies are defined', function ($fi
     if (! is_string($filePath)) {
         $filePath = stream_get_meta_data($filePath)['uri'];
     }
+
+    Functions\expect('wp_delete_file')->once()->with($filePath);
     $generator = Mockery::mock(DependenciesGenerator::class)
         ->makePartial()
         ->shouldAllowMockingProtectedMethods()
@@ -347,7 +349,7 @@ test('Removes dependencies config if no dependencies are defined', function ($fi
         ->getMock();
 
     Helpers::invokeNonPublicClassMethod($generator, 'saveConfigFile', []);
-    expect(file_exists($filePath))->toBeFalse();
+    @unlink($filePath);
 })->with([tmpfile(), '/does/not/exist.php'])->group('generator', 'saveConfigFile');
 
 // getConfigFilePath
