@@ -7,6 +7,7 @@ wp-content/
 /coverage.xml
 src/Dependencies
 src/Classes
+*.zip
 
 # Created by https://www.toptal.com/developers/gitignore/api/composer,sublimetext,linux
 # Edit at https://www.toptal.com/developers/gitignore?templates=composer,sublimetext,linux

@@ -71,6 +71,6 @@
   },
   "archive": {
     "name": "fastendpoints-depends",
-    "exclude": ["LICENSE", "tests/", "wp/", "wp-content/", "docs/", "*.xml", "*.zip", ".md", ".*"]
+    "exclude": ["LICENSE", "config.php", "tests/", "wp/", "wp-content/", "docs/", "*.xml", "*.zip", ".md", ".*"]
   }
 }
