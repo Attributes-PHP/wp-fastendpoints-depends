@@ -6,7 +6,7 @@ License URI:       https://opensource.org/license/MIT
 Requires PHP:      8.1
 Requires at least: 6.0
 Tested up to:      6.8
-Stable tag:        2.0.1
+Stable tag:        2.0.2
 Short Description: Treat WordPress plugins as dependencies to speed up your REST API's
 
 == Description ==

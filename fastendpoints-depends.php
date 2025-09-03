@@ -4,7 +4,7 @@
  * Plugin Name: FastEndpoints Depends
  * Plugin URI:  https://github.com/Attributes-PHP/wp-fastendpoints-depends
  * Description: Treats WordPress plugins as dependencies to speed up your REST API's
- * Version:     2.0.1
+ * Version:     2.0.2
  * Author:      Attributes-PHP
  * Author URI:  https://github.com/Attributes-PHP
  * License:     MIT
