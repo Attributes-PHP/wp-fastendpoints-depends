@@ -14,6 +14,10 @@
 use Attributes\Wp\FastEndpoints\Depends\DependenciesGenerator;
 use Attributes\Wp\FastEndpoints\Depends\DependsAutoloader;
 
+if (! defined('ABSPATH')) {
+    exit;
+}
+
 $composer = __DIR__.'/vendor/autoload.php';
 if (! file_exists($composer)) {
     wp_die(

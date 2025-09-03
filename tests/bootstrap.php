@@ -12,6 +12,8 @@ use Yoast\WPTestUtils\WPIntegration;
  * integration tests.
  */
 if (! Helpers::isIntegrationTest()) {
+    define('ABSPATH', __FILE__.'/fastendpoints-depends/wp/src/');
+
     return;
 }
 

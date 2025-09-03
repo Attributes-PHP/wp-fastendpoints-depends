@@ -4,6 +4,10 @@ namespace Attributes\Wp\FastEndpoints\Depends;
 
 use WP_Rewrite;
 
+if (! defined('ABSPATH')) {
+    exit;
+}
+
 /**
  * Holds logic to load plugins as dependencies for REST endpoints
  *
