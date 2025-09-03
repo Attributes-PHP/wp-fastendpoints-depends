@@ -4,6 +4,10 @@ namespace Attributes\Wp\FastEndpoints\Depends;
 
 use WP_CLI;
 
+if (! defined('ABSPATH')) {
+    exit;
+}
+
 /**
  * Manages REST endpoint dependencies
  *

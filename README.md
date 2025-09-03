@@ -4,7 +4,6 @@
 <p align="center">
     <a href="https://github.com/Attributes-PHP/wp-fastendpoints-depends/actions"><img alt="GitHub Actions Workflow Status (main)" src="https://img.shields.io/github/actions/workflow/status/Attributes-PHP/wp-fastendpoints-depends/tests.yml"></a>
     <a href="https://codecov.io/gh/Attributes-PHP/wp-fastendpoints-depends" ><img alt="Code Coverage" src="https://codecov.io/gh/Attributes-PHP/wp-fastendpoints-depends/graph/badge.svg?token=8N7N9NMGLG"/></a>
-    <a href="https://en-gb.wordpress.org/plugins/fastendpoints-depends/"><img alt="WordPress Plugin Version" src="https://img.shields.io/wordpress/plugin/v/fastendpoints-depends"></a>
     <a href="https://packagist.org/packages/Attributes-PHP/wp-fastendpoints"><img alt="Supported WordPress Versions" src="https://img.shields.io/badge/6.x-versions?logo=wordpress&label=versions"></a>
     <a href="https://opensource.org/licenses/MIT"><img alt="Software License" src="https://img.shields.io/badge/Licence-MIT-brightgreen"></a>
 </p>
@@ -37,7 +36,7 @@
 
 ### Using standard WordPress structure
 
-1. Download plugin from WordPress store
+1. Download latest plugin from our [Releases](https://github.com/Attributes-PHP/wp-fastendpoints-depends/releases) page
 2. Install plugin as a [MU-plugin](https://developer.wordpress.org/advanced-administration/plugins/mu-plugins/)
 3. Run the following WP CLI command `wp fastendpoints depends` or activate any plugin on the website
 4. Enjoy 😊
