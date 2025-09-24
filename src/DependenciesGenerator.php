@@ -222,7 +222,7 @@ class DependenciesGenerator
         }
 
         $timestamp = gmdate('c');
-        $data = "<?php # Generated ${timestamp}\r\n";
+        $data = "<?php # Generated {$timestamp}\r\n";
         $data .= 'return '.var_export($dependencies, true).';';
         file_put_contents($configFilePath, $data);
     }
