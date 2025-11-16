@@ -38,7 +38,7 @@
     "brain/monkey": "2.*",
     "laravel/pint": "*",
     "pestphp/pest-plugin-parallel": "^1.2",
-    "attributes-php/wp-fastendpoints": "^3.0"
+    "attributes-php/wp-fastendpoints": "^4.0"
   },
   "scripts": {
     "lint": "./vendor/bin/pint --config pint.json",

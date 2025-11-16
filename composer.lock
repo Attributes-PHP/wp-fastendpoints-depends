@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "194d4b2007e18a53018c4204dfc964d3",
+    "content-hash": "e54ed90367fbd6bf62d8da2d3faaf094",
     "packages": [
         {
             "name": "attributes-php/wp-fastendpoints-contracts",
-            "version": "v2.2.0",
+            "version": "v3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Attributes-PHP/wp-fastendpoints-contracts.git",
-                "reference": "c5e9608fb91ea0cf27f2545b14b794df903c425f"
+                "reference": "6d56a549d7817fd99eb2dd1cba2f50252b2ae1df"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Attributes-PHP/wp-fastendpoints-contracts/zipball/c5e9608fb91ea0cf27f2545b14b794df903c425f",
-                "reference": "c5e9608fb91ea0cf27f2545b14b794df903c425f",
+                "url": "https://api.github.com/repos/Attributes-PHP/wp-fastendpoints-contracts/zipball/6d56a549d7817fd99eb2dd1cba2f50252b2ae1df",
+                "reference": "6d56a549d7817fd99eb2dd1cba2f50252b2ae1df",
                 "shasum": ""
             },
             "require": {
@@ -44,9 +44,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Attributes-PHP/wp-fastendpoints-contracts/issues",
-                "source": "https://github.com/Attributes-PHP/wp-fastendpoints-contracts/tree/v2.2.0"
+                "source": "https://github.com/Attributes-PHP/wp-fastendpoints-contracts/tree/v3.0.0"
             },
-            "time": "2025-10-10T11:27:37+00:00"
+            "time": "2025-11-16T20:38:50+00:00"
         }
     ],
     "packages-dev": [
@@ -284,22 +284,22 @@
         },
         {
             "name": "attributes-php/wp-fastendpoints",
-            "version": "v3.1.1",
+            "version": "v4.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Attributes-PHP/wp-fastendpoints.git",
-                "reference": "07c66648e4729c12f34af97f990c55faaf80b556"
+                "reference": "849b2125b551cce7b354dd9124ae1f3fc5c276e7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Attributes-PHP/wp-fastendpoints/zipball/07c66648e4729c12f34af97f990c55faaf80b556",
-                "reference": "07c66648e4729c12f34af97f990c55faaf80b556",
+                "url": "https://api.github.com/repos/Attributes-PHP/wp-fastendpoints/zipball/849b2125b551cce7b354dd9124ae1f3fc5c276e7",
+                "reference": "849b2125b551cce7b354dd9124ae1f3fc5c276e7",
                 "shasum": ""
             },
             "require": {
                 "attributes-php/serialization": "^0.3",
                 "attributes-php/validation": "^0.9",
-                "attributes-php/wp-fastendpoints-contracts": "^2.1",
+                "attributes-php/wp-fastendpoints-contracts": "^3.0",
                 "php": "^8.1",
                 "php-di/invoker": "^2.0"
             },
@@ -310,6 +310,9 @@
                 "mockery/mockery": "^1.6",
                 "pestphp/pest-plugin-parallel": "^1.2",
                 "roots/acorn": "^4.2"
+            },
+            "suggest": {
+                "attributes-php/wp-exceptions": "Allows throwing exceptions instead of returning WP_Error'ss"
             },
             "type": "library",
             "autoload": {
@@ -329,9 +332,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Attributes-PHP/wp-fastendpoints/issues",
-                "source": "https://github.com/Attributes-PHP/wp-fastendpoints/tree/v3.1.1"
+                "source": "https://github.com/Attributes-PHP/wp-fastendpoints/tree/v4.0.0"
             },
-            "time": "2025-11-13T20:29:10+00:00"
+            "time": "2025-11-16T20:49:40+00:00"
         },
         {
             "name": "brain/monkey",
